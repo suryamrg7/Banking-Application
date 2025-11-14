@@ -8,12 +8,11 @@ public class DBConnection {
 
 	static Connection get() {
 		try {
-			//Class.forName("oracle.jdbc.driver.OracleDriver");
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			//con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "rishi", "rishi");
-			con = DriverManager.getConnection("jdbc:mysql:thin:@localhost:1521:xe", "root", "123@Rishi");
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "rishi", "rishi");
 			return con;
 		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
